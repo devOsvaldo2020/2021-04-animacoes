@@ -1,0 +1,51 @@
+
+  
+  @keyframes float {
+    to {
+      transform: translateY(0.75em);
+    }
+  }
+
+  body, figure {
+    display: grid;
+    margin: 0;
+  }
+  
+  body {
+    --l: Min(13em, calc((100vw - (var(--m) + 1)*0.5em)/var(--m)));
+    box-sizing: border-box;
+    grid-gap: 0.5em;
+    grid-template-columns: repeat(var(--m), var(--l));
+    place-content: center;
+    padding: 0.5em;
+    min-height: 100vh;
+  }
+  
+  figure {
+    --hov: 0;
+    overflow: hidden;
+  }
+  figure::before, figure::after, figure img {
+    grid-area: 1/1;
+  }
+  figure::before, figure::after {
+    border-radius: var(--rad, 50%);
+    transform: translate(var(--oxy, 0, 0)) rotate(var(--raz, 0deg)) scale(var(--fxy, 2.82843));
+    box-shadow: inset 0 0 0 var(--spr, calc(.5*(1 - var(--hov))*var(--l))) #afaeae;
+    mix-blend-mode: multiply;
+    transition: .5s;
+    pointer-events: none;
+    content: "";
+  }
+  figure:nth-child(2n) {
+    --rad: 0;
+    --fxy: 1;
+  }
+  figure:hover {
+    --hov: 1;
+  }
+  
+  img {
+    width: var(--l);
+    mix-blend-mode: luminosity;
+  }

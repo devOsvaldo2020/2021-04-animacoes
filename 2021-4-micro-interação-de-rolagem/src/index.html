@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<link rel="stylesheet" href="/css/style.css">
+
+  <title>CodePen - Scrolling Microinteraction #CodePenChallenge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
+  
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <ul class="images-list">
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/ezSFnAFi9hY/600x600" alt="cortar frutas cítricas"/></figure>
+    <div class="caption">cut citrus fruits <br> cortar frutas cítricas</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/TIGDsyy0TK4/600x600" alt="manga fatiada"/></figure>
+    <div class="caption">sliced mango <br> manga fatiada</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/TdDtTu2rv4s/600x600" alt="um monte de mirtilos"/></figure>
+    <div class="caption">a bunch of blueberries <br> um monte de mirtilos</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/eudGUrDdBB0/600x600" alt="a pineapple sitting on a table"/></figure>
+    <div class="caption">a pineapple sitting on a table</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/eJH4f1rlG7g/600x600" alt="frozen raspberries"/></figure>
+    <div class="caption">frozen raspberries</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/24RUrLSW1HI/600x600" alt="a sliced strawberry"/></figure>
+    <div class="caption">a sliced strawberry</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/h5yMpgOI5nI/600x600" alt="an arrangement of assorted sliced fruits"/></figure>
+    <div class="caption">an arrangement of assorted sliced fruits</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/2TYrR2IB72s/600x600" alt="sliced watermelons"/></figure>
+    <div class="caption">sliced watermelons</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/1cWZgnBhZRs/600x600" alt="grapefruits, lemons, and pomegranates"/></figure>
+    <div class="caption">grapefruits, lemons, and pomegranates</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/9aOswReDKPo/600x600" alt="half of an avocado"/></figure>
+    <div class="caption">half of an avocado</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/Nl7eLS8E2Ss/600x600" alt="half of a lime"/></figure>
+    <div class="caption">half of a lime</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/3HhXWJzG5Ko/600x600" alt="uma única cereja com haste"/></figure>
+    <div class="caption">a single cherry with stem/uma única cereja com haste</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/fczCr7MdE7U/600x600" alt="a bunch of bananas"/></figure>
+    <div class="caption">a bunch of bananas</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/uI900SItAyY/600x600" alt="three pears"/></figure>
+    <div class="caption">three pears</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/0AynZdszfz0/600x600" alt="a basket full of peaches next to a plate with sliced peaches"/></figure>
+    <div class="caption">a basket full of peaches next to a plate with sliced peaches</div>
+  </li>
+  <li class="list-item">
+    <figure class="figure"><img src="https://source.unsplash.com/C6JhUKs9q8M/600x600" alt="a bowl of avocados"/></figure>
+    <div class="caption">a bowl of avocados</div>
+  </li>
+</ul>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='/js/splitting.min.js'></script>
+      <script id="rendered-js" src="/js/script.js">
+    </script>
+
+  
+
+</body>
+
+</html>
+ 

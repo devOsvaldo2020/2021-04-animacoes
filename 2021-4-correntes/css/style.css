@@ -1,0 +1,113 @@
+
+body {
+    margin: 0;
+    background: grey;
+    height: 1000vh;
+    background-image: linear-gradient(#777777b3 0.1em, transparent 0.1em);
+    background-size: 10em 10em;
+  }
+  
+  .rope {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    background-size: contain;
+    height: 100vh;
+    width: 20px;
+    z-index: 2;
+    background: url(https://public.agriconomie.com/imgbin_rope-euclidean-drawing-png.png) repeat 0 0 transparent;
+    background-size: contain;
+  }
+  .rope--up {
+    right: 70px;
+  }
+  .rope--down {
+    right: 20px;
+  }
+  
+  .wheel {
+    position: fixed;
+    right: 35px;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    border: 3px solid #424242;
+  }
+  .wheel--top {
+    top: 10%;
+  }
+  .wheel--middle {
+    top: 50%;
+  }
+  .wheel--bottom {
+    bottom: 10%;
+  }
+  .wheel .center {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    border-radius: 100%;
+    border: 1px solid #636363;
+    background: #ababab;
+  }
+  .wheel .corner {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 5px solid #989898;
+    border-radius: 100%;
+  }
+  .wheel .corner div {
+    height: 2px;
+    background: #795319;
+    width: 8px;
+    position: absolute;
+  }
+  .wheel .corner div:nth-child(1) {
+    top: 19px;
+    left: 8px;
+    transform: rotate(90deg);
+  }
+  .wheel .corner div:nth-child(2) {
+    transform: rotate(90deg);
+    top: 3px;
+    left: 8px;
+  }
+  .wheel .corner div:nth-child(3) {
+    top: 11px;
+    left: 0;
+  }
+  .wheel .corner div:nth-child(4) {
+    top: 11px;
+    left: 16px;
+  }
+  .wheel .corner div:nth-child(5) {
+    left: 2px;
+    top: 6px;
+    transform: rotate(45deg);
+    width: 10px;
+  }
+  .wheel .corner div:nth-child(6) {
+    left: 13px;
+    top: 16px;
+    transform: rotate(45deg);
+    width: 9px;
+  }
+  .wheel .corner div:nth-child(7) {
+    top: 16px;
+    transform: rotate(139deg);
+    left: 2px;
+    width: 10px;
+  }
+  .wheel .corner div:nth-child(8) {
+    transform: rotate(140deg);
+    top: 7px;
+    right: 1px;
+    width: 13px;
+  }
+  

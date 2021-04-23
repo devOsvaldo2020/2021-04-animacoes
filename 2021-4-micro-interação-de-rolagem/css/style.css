@@ -1,0 +1,81 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.images-list {
+  position: relative;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.list-item {
+  --duration: 300ms;
+  --ease: cubic-bezier(0, 0.55, 0.45, 1);
+  display: grid;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.figure {
+  align-self: end;
+  width: 50vmin;
+  height: 50vmin;
+}
+
+.figure img {
+  opacity: 0;
+}
+
+.caption {
+  align-self: start;
+  padding: 1rem;
+  font-size: clamp(1rem, 4vmin, 4rem);
+  font-family: "Caveat", sans-serif;
+  line-height: 1;
+  text-align: center;
+  opacity: 0;
+  transition: opacity calc(var(--duration) * 2) calc(var(--duration) * 2.75) var(--ease);
+}
+
+.splitting.cells {
+  overflow: visible;
+}
+
+.cell-grid {
+  perspective: 30vmin;
+  perspective-origin: top left;
+}
+
+.cell {
+  --delay: calc(var(--row-index) * var(--col-index) * 3ms);
+  opacity: 0;
+  transform: translate(calc(var(--offset-x) * 10px), calc(var(--offset-y) * 10px));
+  transition: var(--duration) var(--delay) var(--ease);
+  transition-property: opacity, transform;
+}
+
+.in-view .caption {
+  opacity: 1;
+}
+
+.in-view .cell {
+  opacity: 1;
+  transform: translate(-4px, -4px);
+}
